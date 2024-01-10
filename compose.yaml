@@ -1,0 +1,19 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgres://fastapi:Tn0Jrx6o4gq3QKT@db:5432/course_db
+  db:
+    image: postgres:16.1-alpine3.19
+    environment:
+      POSTGRES_DB: course_db
+      POSTGRES_USER: fastapi
+      POSTGRES_PASSWORD: Tn0Jrx6o4gq3QKT
+    ports:
+      - "5433:5432"
