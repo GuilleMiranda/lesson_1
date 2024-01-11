@@ -13,8 +13,6 @@ ENV SECRET_KEY=$SECRET_KEY
 ENV ALGORITHM=$ALGORITHM
 ENV ACCESS_TOKEN_EXPIRY_MINUTES=$ACCESS_TOKEN_EXPIRY_MINUTES
 
-RUN echo "ECHO trying to get something please"
-
 RUN pip install --no-cache-dir -r requirements.txt
 
-ENTRYPOINT ["./startup.sh"]
+CMD [ "uvicorn", "app.main:app" ]
