@@ -10,7 +10,7 @@ from .routers import post, user, auth, vote
 
 app = FastAPI()
 
-origins = ["https://www.youtube.com"]
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
