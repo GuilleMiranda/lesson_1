@@ -13,8 +13,8 @@ ENV SECRET_KEY=$SECRET_KEY
 ENV ALGORITHM=$ALGORITHM
 ENV ACCESS_TOKEN_EXPIRY_MINUTES=$ACCESS_TOKEN_EXPIRY_MINUTES
 
-RUN pip install --no-cache-dir -r requirements.txt && \
-    python -m alembic upgrade head
+RUN pip install --no-cache-dir -r requirements.txt
+RUN python -m alembic upgrade head
 
 EXPOSE 80
 
