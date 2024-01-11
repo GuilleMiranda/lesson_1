@@ -3,7 +3,7 @@ from sqlalchemy.orm import sessionmaker
 
 from .config import settings
 
-url = f"postgres://{settings.db_username}:{settings.db_password}@{settings.db_hostname}:{settings.db_port}/{settings.db_name}"  # "postgresql://fastapi:Tn0Jrx6o4gq3QKT@localhost:5433/course_db"
+url = f"postgres://{settings.db_username}:{settings.db_password}@{settings.db_hostname}/{settings.db_name}"  # "postgresql://fastapi:Tn0Jrx6o4gq3QKT@localhost:5433/course_db"
 
 engine = create_engine(
     url=url,
