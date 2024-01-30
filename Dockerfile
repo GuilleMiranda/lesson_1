@@ -14,6 +14,6 @@ ENV ALGORITHM=$ALGORITHM
 ENV ACCESS_TOKEN_EXPIRY_MINUTES=$ACCESS_TOKEN_EXPIRY_MINUTES
 
 RUN pip install --no-cache-dir -r requirements.txt && \
-    python -m alembic upgrade head
+    python3 -m alembic upgrade head
 
 CMD [ "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "10000" ]
