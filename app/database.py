@@ -3,7 +3,7 @@ from sqlalchemy.orm import sessionmaker
 
 from .config import settings
 
-print("now: " + settings.model_dump())
+print(settings.model_dump())
 
 url = f"postgresql://{settings.db_username}:{settings.db_password}@{settings.db_hostname}/{settings.db_name}" 
 
