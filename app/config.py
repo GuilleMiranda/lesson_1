@@ -11,9 +11,7 @@ class Settings(BaseSettings):
     algorithm: Optional[str]
     access_token_expiry_minutes: Optional[int]
 
-    # class Config:
-    #     env_file = ".env"
-
+    class Config:
+        env_file = ".env"
 
 settings = Settings()
-print(settings.model_dump())
