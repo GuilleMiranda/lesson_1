@@ -12,7 +12,6 @@ class Settings(BaseSettings):
     access_token_expiry_minutes: Optional[int]
 
     class Config:
-        env_file = ".env"
+        env_file = "/home/fastapi/.env"
 
 settings = Settings()
-raise Exception("Alright, i'm doing it myself")
