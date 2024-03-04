@@ -62,5 +62,13 @@ jobs:
     needs: [build]
 
     steps:
-      - name: deploying
-        run: echo "going to deploy"
+      - name: deopy to ubuntu server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{secrets.SERVER_HOST}}
+          username: ${{secrets.SERVER_USERNAME}}
+          password: ${{secrets.SERVER_PASSWORD}}
+          script: |
+            cd app/src
+            git pull
+            sudo systemctl restart api
