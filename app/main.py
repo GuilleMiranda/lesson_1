@@ -7,7 +7,7 @@ from .database import engine
 from .routers import post, user, auth, vote
 
 # models.Base.metadata.create_all(bind=engine)
-print('reaching new heights')
+
 app = FastAPI()
 
 origins = ["*"]

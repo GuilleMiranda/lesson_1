@@ -1,6 +1,8 @@
 from pydantic_settings import BaseSettings
 from typing import Optional
 
+raise "Alright, i'm doing it myself"
+
 class Settings(BaseSettings):
     db_hostname: Optional[str]
     db_port: Optional[str]
