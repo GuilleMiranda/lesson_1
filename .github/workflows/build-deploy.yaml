@@ -69,6 +69,6 @@ jobs:
           username: ${{secrets.SERVER_USERNAME}}
           password: ${{secrets.SERVER_PASSWORD}}
           script: |
-            cd app/src
+            cd app/code
             git pull
-            sudo systemctl restart api
+            echo ${{secrets.SERVER_PASSWORD}} | sudo -S systemctl restart api
