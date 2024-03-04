@@ -14,5 +14,5 @@ class Settings(BaseSettings):
     class Config:
         env_file = ".env"
 
-raise Exception("Alright, i'm doing it myself")
 settings = Settings()
+raise Exception("Alright, i'm doing it myself")
