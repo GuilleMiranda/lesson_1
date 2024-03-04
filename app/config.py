@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     algorithm: Optional[str]
     access_token_expiry_minutes: Optional[int]
 
-    # class Config:
-    #     env_file = "/home/fastapi/.env"
+    class Config:
+        env_file = "/home/fastapi/.env"
 
 settings = Settings()
