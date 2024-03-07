@@ -27,4 +27,4 @@ app.include_router(vote.router)
 
 @app.get("/")
 def home():
-    return {"message": "welcome"}
+    return {"message": "/docs to see the docs :)"}
