@@ -70,4 +70,4 @@ jobs:
           script: |
             cd app/code
             git pull
-            echo ${{secrets.SERVER_PASSWORD}} | sudo -S systemctl restart api
+            echo ${{secrets.SERVER_PASSWORD}} | sudo -S systemctl restart api 
