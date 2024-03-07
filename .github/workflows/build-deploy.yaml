@@ -63,8 +63,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build]
     steps:
-      - name: Checkout code ?
-        uses: actions/checkout@v4
       - name: deploy to ubuntu server
         uses: appleboy/ssh-action@v1.0.3
         with:
